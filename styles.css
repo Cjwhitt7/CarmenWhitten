@@ -129,7 +129,7 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opaci
 .future-status{color:var(--flux)!important}
 @media(max-width:680px){.route-map{padding-top:65px;padding-bottom:70px}.route-list a{grid-template-columns:34px 1fr 20px;gap:10px;padding:18px 0}.route-title{font-size:15px}.route-desc{grid-column:2;grid-row:2}.route-arrow{grid-column:3;grid-row:1}.page-intro{padding-top:65px;padding-bottom:38px}.page-intro h1{letter-spacing:-1.8px}.page-intro:after{right:0;bottom:12px;font-size:28px}.home-note{padding:18px}.hero-art{margin-top:20px}}
 
-/* Open-notebook layout: fewer boxes, clearer hierarchy, easier to expand. */
+/* Open-notebook layout: fewer boxes, clearer hierarchy, expandable. */
 .open-notebook { max-width: 980px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
 .open-notebook .section-heading { margin-bottom: 1.5rem; }
 .open-notebook .notebook-lede { max-width: 700px; color: var(--muted, #b9b0c9); line-height: 1.8; }
