@@ -1,54 +1,65 @@
-# Engineering Portfolio — Starter Kit
+# Engineering Portfolio — Editable Starter Kit
 
-A dark, royal-purple portfolio with a subtle retro-futuristic / early-2000s sci-fi feel. Built with plain HTML, CSS, and JavaScript: no framework, build step, or install required. Designed for GitHub Pages.
+A multi-page engineering portfolio with a dark royal-purple palette, subtle early-2000s retro-futuristic lab atmosphere, and an open notebook layout rather than a wall of matching cards. Built with plain HTML, CSS, and JavaScript: no framework, build step, or install required. Designed for GitHub Pages.
 
-## Files
+## Recommended site structure
 
-- `index.html` — main portfolio and all homepage sections
-- `styles.css` — colors, layout, responsive styling, and visual effects
-- `script.js` — mobile navigation, dropdown, and current footer year
+- `index.html` — home / quick introduction and navigation
+- `research.html` — collaborative team research, self-directed investigations, and future research interests
+- `projects.html` — robotics simulation, software, hardware, and aerospace technical projects
+- `about.html` — background, personal interests, and contact links
 - `resume.html` — editable resume page with Print / Save PDF
-- Research-first section and expandable “Room for what's next” cards for future questions, works in progress, and new projects
-- `assets/favicon.svg` — small site icon
+- `styles.css` — colors, layout, responsive styling, and visual effects
+- `script.js` — mobile navigation and footer year
+- `assets/` — favicon and a place for your own images, diagrams, plots, and project screenshots
+
+You do not need to create more pages yet. Keep research and projects as two different pages: research is for questions, investigations, methods, and findings; projects is for things you simulated, coded, built, integrated, or tested. Add a new page later only if a category becomes large enough to deserve its own space.
 
 ## Put it on GitHub Pages
 
-1. Sign in to GitHub and create a new repository. For a personal site, a repository named `YOUR-USERNAME.github.io` is a common option. A normal project repository works too.
+1. Create a repository on GitHub. For a personal site, `YOUR-USERNAME.github.io` is a common repository name.
 2. Unzip this folder on your computer.
-3. Upload the **contents** of this folder (not the ZIP itself) to the repository. `index.html` should be at the top level of the repository.
-4. In the repository, open **Settings → Pages**.
-5. Under the build/deployment section, choose **Deploy from a branch**, select `main` and `/(root)`, then save.
+3. Upload the **contents** of this folder (not the ZIP itself) to the repository. `index.html` should be at the top level. Include all other HTML files, `styles.css`, `script.js`, and the `assets/` folder.
+4. Open repository **Settings → Pages**.
+5. Choose **Deploy from a branch**, select `main` and `/(root)`, then save.
 6. Wait a minute or two and open the Pages URL GitHub provides.
 
-## Quick customization checklist
+## A good way to describe your experience honestly
 
-Search for `[Your` and other square-bracket placeholders in `index.html` and `resume.html`. Replace them with your own name, focus, location, project descriptions, education, experience, and interests.
+Different kinds of work all belong in a portfolio; label them clearly so readers understand the context:
+
+- **Collaborative research:** work being done with your team. Describe the overall question, then state your personal role and contributions. Check with the team before sharing confidential details.
+- **Self-directed investigation:** independent reading, literature exploration, calculations, technical notes, or deep personal study. You can show your process and conclusions without presenting it as formal lab research.
+- **Simulation work:** explain the system you modeled, what you changed or tested, the tools used, what the results showed, and the limitations. Simulation is meaningful technical work; just distinguish it from physical hardware testing.
+- **Projects and builds:** software, hardware, prototypes, integrations, or class/personal projects. Be specific about what you personally did.
+- **Interests / future directions:** topics you want to explore. These are allowed to be interests, not claims of experience.
+
+## Editing the pages
 
 ### Most common edits
 
-- **Name / branding:** change `YOUR NAME`, `YN`, and `[Your Name]` in `index.html` and `resume.html`.
-- **Email:** replace `your.email@example.com` with your real address.
-- **Social links:** replace the placeholder GitHub and LinkedIn URLs.
-- **Project cards:** search for `PROJECT 001` and edit each project title, description, skill tags, and link.
-- **Future work:** search for `THE NEXT ITERATION` in `index.html`. Duplicate one `<article class="future-card">...</article>` block to add another research direction or work-in-progress card; change its status, title, description, and category.
-- **Resume:** edit `resume.html`. Use its Print / Save PDF button and choose “Save as PDF” in your browser if you want a PDF copy.
-- **Colors:** open `styles.css` and edit the variables at the very top under `:root`. `--bg` is the background, `--purple` is the accent, and `--text` is the main text color.
-- **Fonts:** the design loads Manrope and DM Mono from Google Fonts. If you'd rather not use external fonts, remove the `@import` line at the top of `styles.css`; fallback fonts are included.
-- **Remove or reorder sections:** each main section is a clearly marked `<section>` in `index.html`. You can remove a whole section or move it. If you remove a section, also remove its link from the navigation.
-- **Make the layout simpler:** styles are grouped by component names (`.hero`, `.discipline-grid`, `.project-row`, `.about-section`, `.contact-section`). Search for the matching name in `styles.css`.
+- **Name / branding:** search for `YOUR NAME`, `YN`, and `[Your Name]` across the HTML files.
+- **Email and social links:** replace `your.email@example.com`, `https://github.com/`, and `https://www.linkedin.com/` with your real contact details. Remove links you don't use.
+- **Research page:** open `research.html`. Each `.notebook-entry` is an open, editorial-style entry. Replace the bracketed prompts and delete examples that don't fit. Duplicate an entire `<article class="notebook-entry">...</article>` block to add another investigation.
+- **Projects page:** open `projects.html`. Each project entry asks for a problem or goal, what you personally did, tools, and what you learned. Duplicate a `.notebook-entry` block to add another project. Change its `id` if you want to link directly to it.
+- **About page:** edit `about.html` to sound like you. Personal details are optional; keep only what you want to share publicly.
+- **Resume:** edit `resume.html`. Use Print / Save PDF and choose “Save as PDF” in your browser.
+- **Colors and layout:** edit the variables near the top of `styles.css`. Search for `.notebook-entry` to adjust the open research/project layout, or `.page-intro` for page headings.
+- **Images and diagrams:** place image files in `assets/`, then add an image element to the relevant HTML page. For example: `<img src="assets/robot-simulation.png" alt="Robot arm simulation in a virtual environment">`. Use an accurate alt description.
+- **Reorder content:** move a whole `<article class="notebook-entry">...</article>` block to change the order. Remove the matching navigation link only if you remove a whole page.
 
-## Design notes
+## Beginner workflow
 
-The visual direction uses deep violet, soft lavender, fine technical grid lines, orbital diagrams, and monospace instrument-style labels. It aims for retro-futuristic atmosphere without using copyrighted movie logos, imagery, or fonts. The illustration is CSS-built, so you can change it without needing image-editing software.
+1. Make a backup copy before experimenting.
+2. Edit one page or one visual detail at a time.
+3. Open `index.html` in your browser to preview it. Navigation between local pages works when the files stay together in one folder.
+4. When ready, upload the updated files to GitHub and commit the changes.
 
 ## Before publishing
 
-- Replace all placeholders and example project links.
+- Replace placeholders and example links.
 - Check every link on desktop and mobile.
-- Only include projects, skills, and claims that accurately represent your work.
-- Add your own project images by placing them in `assets/` and updating the relevant HTML.
-- GitHub Pages hosts static files; this starter doesn't require a backend or server-side code.
+- Only include claims and skills that accurately represent your work.
+- Do not share private team research, unpublished data, or sensitive project details without permission.
 
-
-## Page structure
-The site is split into separate pages so it feels easier to navigate: Home, Research, Projects, About / Contact, and Resume. Keep `styles.css` and `script.js` alongside the HTML files, and upload the `assets` folder too. The visual direction uses dark plum, lavender, a little electric-lime flux-capacitor glow, and technical field-note details rather than a wall of cards.
+The design uses deep violet, soft lavender, subtle grid lines, small technical annotations, and an occasional electric-lime accent. It aims for retro-futuristic character without relying on copyrighted movie logos, imagery, or fonts.

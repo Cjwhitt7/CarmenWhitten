@@ -128,3 +128,22 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opaci
 .project-meta span:first-child{color:var(--flux)!important}
 .future-status{color:var(--flux)!important}
 @media(max-width:680px){.route-map{padding-top:65px;padding-bottom:70px}.route-list a{grid-template-columns:34px 1fr 20px;gap:10px;padding:18px 0}.route-title{font-size:15px}.route-desc{grid-column:2;grid-row:2}.route-arrow{grid-column:3;grid-row:1}.page-intro{padding-top:65px;padding-bottom:38px}.page-intro h1{letter-spacing:-1.8px}.page-intro:after{right:0;bottom:12px;font-size:28px}.home-note{padding:18px}.hero-art{margin-top:20px}}
+
+/* Open-notebook layout: fewer boxes, clearer hierarchy, easier to expand. */
+.open-notebook { max-width: 980px; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+.open-notebook .section-heading { margin-bottom: 1.5rem; }
+.open-notebook .notebook-lede { max-width: 700px; color: var(--muted, #b9b0c9); line-height: 1.8; }
+.notebook-entry { display: grid; grid-template-columns: minmax(130px, .28fr) 1fr; gap: 1.5rem; padding: 1.7rem 0; border-top: 1px solid rgba(198, 174, 255, .23); }
+.notebook-entry:last-child { border-bottom: 1px solid rgba(198, 174, 255, .23); }
+.entry-side { font: 600 .72rem/1.7 'DM Mono', monospace; letter-spacing: .08em; color: #bca4ef; text-transform: uppercase; }
+.entry-side span { display: block; color: #8d829f; font-weight: 400; }
+.entry-main h3 { margin: 0 0 .55rem; font-size: clamp(1.25rem, 2vw, 1.65rem); }
+.entry-main p { max-width: 680px; color: #c6bfd2; line-height: 1.8; margin: .5rem 0; }
+.entry-main .prompt { color: #9d91b2; font-size: .93rem; }
+.entry-main ul { padding-left: 1.2rem; color: #c6bfd2; line-height: 1.9; }
+.inline-fields { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; margin-top: .8rem; font: .72rem 'DM Mono', monospace; color: #bca4ef; text-transform: uppercase; letter-spacing: .05em; }
+.inline-fields span::before { content: '↳ '; color: #c7ed79; }
+.template-callout { margin: 2rem 0; padding: 1rem 0 1rem 1.2rem; border-left: 2px solid #c7ed79; color: #c6bfd2; line-height: 1.8; }
+.template-callout strong { color: #eee8fa; }
+.template-instructions { color: #a69bb7; font-size: .88rem; line-height: 1.7; margin-top: 1rem; }
+@media (max-width: 640px) { .open-notebook { padding: 1.5rem 1.15rem 3.5rem; } .notebook-entry { grid-template-columns: 1fr; gap: .45rem; padding: 1.3rem 0; } }
