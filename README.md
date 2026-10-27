@@ -1,8 +1,6 @@
-# Engineering Portfolio — Editable Starter Kit
+//Engineering Portfolio 
 
-A multi-page engineering portfolio with a dark royal-purple palette, subtle early-2000s retro-futuristic lab atmosphere, and an open notebook layout rather than a wall of matching cards. Built with plain HTML, CSS, and JavaScript: no framework, build step, or install required. Designed for GitHub Pages.
-
-## Recommended site structure
+//Site structure
 
 - `index.html` — home / quick introduction and navigation
 - `research.html` — collaborative team research, self-directed investigations, and future research interests
@@ -13,18 +11,7 @@ A multi-page engineering portfolio with a dark royal-purple palette, subtle earl
 - `script.js` — mobile navigation and footer year
 - `assets/` — favicon and a place for your own images, diagrams, plots, and project screenshots
 
-You do not need to create more pages yet. Keep research and projects as two different pages: research is for questions, investigations, methods, and findings; projects is for things you simulated, coded, built, integrated, or tested. Add a new page later only if a category becomes large enough to deserve its own space.
 
-## Put it on GitHub Pages
-
-1. Create a repository on GitHub. For a personal site, `YOUR-USERNAME.github.io` is a common repository name.
-2. Unzip this folder on your computer.
-3. Upload the **contents** of this folder (not the ZIP itself) to the repository. `index.html` should be at the top level. Include all other HTML files, `styles.css`, `script.js`, and the `assets/` folder.
-4. Open repository **Settings → Pages**.
-5. Choose **Deploy from a branch**, select `main` and `/(root)`, then save.
-6. Wait a minute or two and open the Pages URL GitHub provides.
-
-## A good way to describe your experience honestly
 
 Different kinds of work all belong in a portfolio; label them clearly so readers understand the context:
 
@@ -62,4 +49,3 @@ Different kinds of work all belong in a portfolio; label them clearly so readers
 - Only include claims and skills that accurately represent your work.
 - Do not share private team research, unpublished data, or sensitive project details without permission.
 
-The design uses deep violet, soft lavender, subtle grid lines, small technical annotations, and an occasional electric-lime accent. It aims for retro-futuristic character without relying on copyrighted movie logos, imagery, or fonts.
