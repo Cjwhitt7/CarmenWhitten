@@ -48,3 +48,7 @@ The visual direction uses deep violet, soft lavender, fine technical grid lines,
 - Only include projects, skills, and claims that accurately represent your work.
 - Add your own project images by placing them in `assets/` and updating the relevant HTML.
 - GitHub Pages hosts static files; this starter doesn't require a backend or server-side code.
+
+
+## Page structure
+The site is split into separate pages so it feels easier to navigate: Home, Research, Projects, About / Contact, and Resume. Keep `styles.css` and `script.js` alongside the HTML files, and upload the `assets` folder too. The visual direction uses dark plum, lavender, a little electric-lime flux-capacitor glow, and technical field-note details rather than a wall of cards.

@@ -1,161 +1,36 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#100b1f">
-  <meta name="description" content="Engineering portfolio spanning robotics, research, software, and aerospace.">
-  <title>Your Name — Engineering Portfolio</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="ambient ambient-one" aria-hidden="true"></div>
-  <div class="ambient ambient-two" aria-hidden="true"></div>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="Your Name home">
-      <span class="brand-mark">Y<span>N</span></span>
-      <span class="brand-copy"><strong>YOUR NAME</strong><small>ENGINEERING / R&D</small></span>
-    </a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
-      <span></span><span></span>
-    </button>
-    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-      <a class="nav-link active" href="#home">Home</a>
-      <div class="nav-dropdown">
-        <button class="nav-link dropdown-toggle" aria-expanded="false">Explore <span class="chevron">⌄</span></button>
-        <div class="dropdown-menu">
-          <a href="#robotics"><span>01</span> Robotics</a>
-          <a href="#research"><span>02</span> Research</a>
-          <a href="#software"><span>03</span> Software</a>
-          <a href="#aerospace"><span>04</span> Aerospace</a>
-        </div>
-      </div>
-      <a class="nav-link" href="#about">About</a>
-      <a class="nav-link" href="#contact">Contact</a>
-      <a class="nav-resume" href="resume.html">Resume <span>↗</span></a>
-    </nav>
-  </header>
-
-  <main id="main">
-    <section class="hero section-wrap" id="home">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="status-dot"></span> ENGINEERING THE NOT-YET</div>
-        <h1>Curiosity, built<br>into <span class="gradient-text">reality.</span></h1>
-        <p class="hero-intro">I’m <strong>[Your Name]</strong> — an engineer and researcher exploring the space between bold ideas and working systems.</p>
-        <p class="hero-sub">Robotics. Research. Software. Aerospace. A little future-forward thinking, grounded in real engineering.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#work">Explore my work <span>↘</span></a>
-          <a class="button button-quiet" href="resume.html">View resume <span>↗</span></a>
-        </div>
-        <div class="hero-meta">
-          <div><span class="meta-label">CURRENT FOCUS</span><strong>[Your current focus]</strong></div>
-          <div><span class="meta-label">BASE</span><strong>[City, Country]</strong></div>
-        </div>
-      </div>
-      <div class="hero-art" aria-label="Abstract futuristic engineering illustration">
-        <div class="art-topline"><span>FIG. 001 / SYSTEMS VIEW</span><span>00:00:00:∞</span></div>
-        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
-        <div class="core"><div class="core-inner">YN</div></div>
-        <div class="crosshair crosshair-one"></div><div class="crosshair crosshair-two"></div>
-        <div class="art-label label-a"><span class="label-line"></span><span>IDEA → ITERATION</span></div>
-        <div class="art-label label-b"><span class="label-line"></span><span>BUILD / TEST / LEARN</span></div>
-        <div class="coordinate coord-a">41° 18' 00.0"N</div>
-        <div class="coordinate coord-b">FUTURE SYSTEMS LAB</div>
-        <div class="art-bottomline"><span>DESIGN FOR WHAT'S NEXT</span><span>EST. 20XX</span></div>
-      </div>
-      <div class="scroll-cue"><span></span> SCROLL TO EXPLORE</div>
-    </section>
-
-    <section class="ticker" aria-label="Areas of interest">
-      <div class="ticker-track"><span>ROBOTICS</span><i>✳</i><span>RESEARCH</span><i>✳</i><span>SOFTWARE</span><i>✳</i><span>AEROSPACE</span><i>✳</i><span>ROBOTICS</span><i>✳</i><span>RESEARCH</span><i>✳</i><span>SOFTWARE</span><i>✳</i><span>AEROSPACE</span><i>✳</i></div>
-    </section>
-
-    <section class="section-wrap work-section" id="work">
-      <div class="section-heading">
-        <div><div class="eyebrow">01 / RESEARCH & SELECTED DIRECTIONS</div><h2>Questions worth <span class="gradient-text">chasing.</span></h2></div>
-        <p>Research-led engineering, open questions, experiments, and projects that evolve over time.</p>
-      </div>
-      <div class="research-note">
-        <div class="research-note-icon">⌁</div>
-        <div><span class="note-kicker">THE RESEARCH MINDSET</span><h3>Start with a question. Follow the evidence.</h3><p>This portfolio is designed to grow with your work — from early ideas and literature reviews to prototypes, experiments, publications, and final results.</p></div>
-        <a class="text-link" href="#research">Explore research <span>↘</span></a>
-      </div>
-      <div class="discipline-grid">
-        <article class="discipline-card card-robotics" id="robotics">
-          <div class="card-index">01 — ROBOTICS</div><div class="card-icon robot-icon"><span></span><span></span><span></span><i></i></div>
-          <h3>Robotics & autonomy</h3><p>From sensing and control to intelligent machines that interact with the real world.</p>
-          <div class="tag-row"><span>CONTROL</span><span>PERCEPTION</span><span>MECHATRONICS</span></div>
-          <a class="text-link" href="#project-robotics">View projects <span>↗</span></a>
-        </article>
-        <article class="discipline-card card-research" id="research">
-          <div class="card-index">02 — RESEARCH</div><div class="card-icon research-icon"><span></span><span></span><span></span></div>
-          <h3>Research & discovery</h3><p>Exploring open questions through literature reviews, modeling, experiments, and evidence-led analysis.</p>
-          <div class="tag-row"><span>EXPERIMENTS</span><span>MODELING</span><span>ANALYSIS</span></div>
-          <a class="text-link" href="#project-research">View research <span>↗</span></a>
-        </article>
-        <article class="discipline-card card-software" id="software">
-          <div class="card-index">03 — SOFTWARE</div><div class="card-icon software-icon"><span>&lt;/&gt;</span></div>
-          <h3>Software & systems</h3><p>Building the code, tools, and infrastructure that make complex systems useful.</p>
-          <div class="tag-row"><span>PYTHON</span><span>C/C++</span><span>TOOLS</span></div>
-          <a class="text-link" href="#project-software">View software <span>↗</span></a>
-        </article>
-        <article class="discipline-card card-aerospace" id="aerospace">
-          <div class="card-index">04 — AEROSPACE</div><div class="card-icon aerospace-icon"><span>✳</span><i></i></div>
-          <h3>Aerospace & flight</h3><p>Exploring flight, spacecraft, and the engineering that pushes our horizons outward.</p>
-          <div class="tag-row"><span>FLIGHT</span><span>SIMULATION</span><span>MISSION DESIGN</span></div>
-          <a class="text-link" href="#project-aerospace">View projects <span>↗</span></a>
-        </article>
-      </div>
-    </section>
-
-    <section class="featured-section" aria-labelledby="featured-title">
-      <div class="section-wrap">
-        <div class="section-heading">
-          <div><div class="eyebrow">02 / THE WORKBENCH</div><h2 id="featured-title">Selected <span class="gradient-text">projects.</span></h2></div>
-          <p>Feature completed work here, then keep promising questions and works-in-progress in the next-iteration section below.</p>
-        </div>
-        <div class="project-list">
-          <article class="project-row" id="project-robotics">
-            <div class="project-visual visual-robot"><div class="visual-grid"></div><div class="mini-arm"><i></i><b></b><em></em><span></span></div><span class="visual-caption">MECHANISM / 001</span></div>
-            <div class="project-info"><div class="project-meta"><span>ROBOTICS</span><span>PROJECT 001</span></div><h3>[Autonomous Robotics Project]</h3><p>A short, specific description of the challenge, what you built, and what made the result useful or interesting.</p><div class="tag-row"><span>ROS 2</span><span>PYTHON</span><span>CONTROL</span></div><a class="text-link" href="https://github.com/" target="_blank" rel="noreferrer">Explore repository <span>↗</span></a></div>
-          </article>
-          <article class="project-row" id="project-research">
-            <div class="project-visual visual-research"><div class="plot-line"></div><div class="plot-dot"></div><span class="visual-caption">DATA / 002</span><div class="plot-axis">SIGNAL STRENGTH →</div></div>
-            <div class="project-info"><div class="project-meta"><span>RESEARCH</span><span>PROJECT 002</span></div><h3>[Research Question or Paper]</h3><p>Summarize the question, methodology, your contribution, and the most important finding in plain language.</p><div class="tag-row"><span>MODELING</span><span>DATA ANALYSIS</span><span>TECHNICAL WRITING</span></div><a class="text-link" href="https://scholar.google.com/" target="_blank" rel="noreferrer">Read publication / report <span>↗</span></a></div>
-          </article>
-          <article class="project-row" id="project-software">
-            <div class="project-visual visual-software"><div class="code-window"><div class="code-dots">● ● ●</div><span>def build_future():</span><span class="indent">prototype = idea()</span><span class="indent">test(prototype)</span><span class="indent code-accent">return iterate()</span></div><span class="visual-caption">SOFTWARE / 003</span></div>
-            <div class="project-info"><div class="project-meta"><span>SOFTWARE</span><span>PROJECT 003</span></div><h3>[Software Tool or Application]</h3><p>Describe the problem this tool solves, the technical decisions behind it, and what you learned while building it.</p><div class="tag-row"><span>JAVASCRIPT</span><span>API</span><span>UI / UX</span></div><a class="text-link" href="https://github.com/" target="_blank" rel="noreferrer">Explore repository <span>↗</span></a></div>
-          </article>
-          <article class="project-row" id="project-aerospace">
-            <div class="project-visual visual-aerospace"><div class="planet"></div><div class="trajectory"></div><span class="visual-caption">FLIGHT PATH / 004</span></div>
-            <div class="project-info"><div class="project-meta"><span>AEROSPACE</span><span>PROJECT 004</span></div><h3>[Aerospace Design or Simulation]</h3><p>Explain the mission or design objective, constraints you considered, and how you evaluated the outcome.</p><div class="tag-row"><span>SIMULATION</span><span>CAD</span><span>TRAJECTORY</span></div><a class="text-link" href="https://github.com/" target="_blank" rel="noreferrer">View project details <span>↗</span></a></div>
-          </article>
-        </div>
-        <div class="future-work">
-          <div class="future-heading"><div><div class="eyebrow">THE NEXT ITERATION</div><h3>Room for what's <span class="gradient-text">next.</span></h3></div><p>Keep this section for work in progress, new research directions, and projects still taking shape.</p></div>
-          <div class="future-grid">
-            <article class="future-card"><span class="future-status"><i></i> EXPLORING</span><div class="future-number">05</div><h4>[Future research question]</h4><p>A question you're investigating, a paper you're reading, or a concept you'd like to test.</p><span class="future-type">RESEARCH DIRECTION</span></article>
-            <article class="future-card"><span class="future-status"><i></i> IN PROGRESS</span><div class="future-number">06</div><h4>[Prototype / build in progress]</h4><p>Document the current stage, the next milestone, and what you hope to learn from the build.</p><span class="future-type">ACTIVE PROJECT</span></article>
-            <article class="future-card future-add"><div class="add-symbol">＋</div><h4>Your next project goes here.</h4><p>Duplicate a card in <code>index.html</code> whenever you want to add a new project, paper, or experiment.</p><span class="future-type">SPACE TO GROW</span></article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-section section-wrap" id="about">
-      <div class="about-mark"><div class="about-orbit"></div><div class="about-monogram">YN<span>+</span></div><span class="about-stamp">ALWAYS IN BETA</span></div>
-      <div class="about-copy"><div class="eyebrow">03 / THE HUMAN BEHIND THE HARDWARE</div><h2>Serious about the work.<br><span class="gradient-text">Curious about everything.</span></h2><p>I'm an aspiring [engineer / researcher / builder] interested in how ambitious ideas become real systems. I like working across disciplines, learning by making, and asking the extra question that leads to a better design.</p><p>Outside the lab, I'm usually [personal interest], [another interest], or collecting ideas for the next project. I believe good engineering takes technical rigor, creativity, and the willingness to iterate.</p><div class="about-facts"><div><span>01</span><strong>Think in systems</strong></div><div><span>02</span><strong>Build to understand</strong></div><div><span>03</span><strong>Keep looking forward</strong></div></div><a class="text-link" href="resume.html">More about my background <span>↗</span></a></div>
-    </section>
-
-    <section class="contact-section" id="contact">
-      <div class="section-wrap contact-inner"><div class="eyebrow">04 / OPEN CHANNEL</div><h2>Have a good problem?<br><span class="gradient-text">Let's build something.</span></h2><p>Interested in research collaborations, engineering opportunities, or a conversation about a project? I'd love to hear from you.</p><div class="contact-actions"><a class="button button-primary" href="mailto:your.email@example.com">Send a message <span>↗</span></a><a class="button button-quiet" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a><a class="button button-quiet" href="https://github.com/" target="_blank" rel="noreferrer">GitHub <span>↗</span></a></div><div class="contact-coordinate">SIGNAL OPEN <span class="status-dot"></span> RESPONSE TIME: HUMAN</div></div>
-    </section>
-  </main>
-
-  <footer class="site-footer"><a class="footer-brand" href="#home">YN<span> / </span>ENGINEERING</a><span>Designed for the present. Built for what's next.</span><span>© <span id="year">2026</span> YOUR NAME</span></footer>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#100b1f"><meta name="description" content="Engineering portfolio spanning robotics, research, software, and aerospace."><title>Your Name — Engineering Portfolio</title><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><script src="script.js" defer></script></head><body><a class="skip-link" href="#main">Skip to content</a><div class="ambient ambient-one" aria-hidden="true"></div><div class="ambient ambient-two" aria-hidden="true"></div><header class="site-header">
+  <a class="brand" href="index.html" aria-label="Your Name home"><span class="brand-mark">YN</span><span class="brand-copy"><strong>YOUR NAME</strong><small>ENGINEERING / R&amp;D</small></span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
+  <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+    <a class="nav-link active" href="index.html">Home</a><a class="nav-link" href="research.html">Research</a><a class="nav-link" href="projects.html">Projects</a><a class="nav-link" href="about.html">About / Contact</a><a class="nav-resume" href="resume.html">Resume <span>↗</span></a>
+  </nav>
+</header><main id="main"><section class="hero section-wrap" id="home">
+<div class="hero-copy">
+<div class="eyebrow"><span class="status-dot"></span> 88 MPH / IDEAS INTO REALITY</div>
+<h1>Curiosity, built<br/>for <span class="gradient-text">the future.</span></h1>
+<p class="hero-intro">I’m <strong>[Your Name]</strong> — an engineer and researcher exploring the space between bold ideas and working systems.</p>
+<p class="hero-sub">Robotics. Research. Software. Aerospace. A little future-forward thinking, grounded in real engineering.</p>
+<div class="hero-actions">
+<a class="button button-primary" href="projects.html">Enter the workbench <span>↘</span></a>
+<a class="button button-quiet" href="resume.html">View resume <span>↗</span></a>
+</div>
+<div class="hero-meta">
+<div><span class="meta-label">CURRENT FOCUS</span><strong>[Your current focus]</strong></div>
+<div><span class="meta-label">BASE</span><strong>[City, Country]</strong></div>
+</div>
+</div>
+<div aria-label="Abstract futuristic engineering illustration" class="hero-art">
+<div class="art-topline"><span>FIG. 001 / SYSTEMS VIEW</span><span>TIME CIRCUIT // ON</span></div>
+<div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+<div class="core"><div class="core-inner">YN</div></div>
+<div class="crosshair crosshair-one"></div><div class="crosshair crosshair-two"></div>
+<div class="art-label label-a"><span class="label-line"></span><span>IDEA → ITERATION</span></div>
+<div class="art-label label-b"><span class="label-line"></span><span>BUILD / TEST / LEARN</span></div>
+<div class="coordinate coord-a">41° 18' 00.0"N</div>
+<div class="coordinate coord-b">TEMPORAL SYSTEMS / R&amp;D</div>
+<div class="art-bottomline"><span>NEXT STOP: THE FUTURE</span><span>EST. 20XX</span></div>
+</div>
+<div class="scroll-cue"><span></span> PLEASE FASTEN YOUR SEATBELT</div>
+</section><section aria-label="Areas of interest" class="ticker">
+<div class="ticker-track"><span>ROBOTICS</span><i>✳</i><span>RESEARCH</span><i>✳</i><span>SOFTWARE</span><i>✳</i><span>AEROSPACE</span><i>✳</i><span>ROBOTICS</span><i>✳</i><span>RESEARCH</span><i>✳</i><span>SOFTWARE</span><i>✳</i><span>AEROSPACE</span><i>✳</i></div>
+</section><section class="section-wrap route-map"><div class="eyebrow">YOUR FIELD GUIDE / START HERE</div><h2>A few ways to <span class="gradient-text">explore.</span></h2><p class="route-intro">This is a working notebook, not a finished museum exhibit. Follow a question, look through a build, or get to know the person behind the experiments.</p><div class="route-list"><a href="research.html"><span class="route-no">01</span><span class="route-title">Research &amp; open questions</span><span class="route-desc">Ideas, methods, experiments, and what the evidence says.</span><span class="route-arrow">↗</span></a><a href="projects.html"><span class="route-no">02</span><span class="route-title">Projects &amp; prototypes</span><span class="route-desc">Things built, tested, broken, improved, and learned from.</span><span class="route-arrow">↗</span></a><a href="about.html"><span class="route-no">03</span><span class="route-title">About &amp; contact</span><span class="route-desc">The human behind the schematics.</span><span class="route-arrow">↗</span></a></div><div class="home-note"><span class="note-stamp">LAB NOTE 001</span><p><strong>Working principle:</strong> stay curious, measure twice, and don't trust a result until you've tried to break it.</p><span class="note-scribble">— future me, probably</span></div></section></main><footer class="site-footer"><a class="footer-brand" href="index.html">YN<span> / </span>ENGINEERING</a><span>Designed for the present. Built for what's next.</span><span>© <span id="year">2026</span> YOUR NAME</span></footer></body></html>
