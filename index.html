@@ -3,203 +3,159 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Engineering portfolio exploring robotics, aerospace, embedded systems, and research.">
-  <title>Your Name | Engineering Portfolio</title>
-  <style>
-    :root {
-      --bg: #0c0914;
-      --panel: #151020;
-      --panel-2: #1d1530;
-      --line: #34264b;
-      --text: #f5f0ff;
-      --muted: #b7abc9;
-      --purple: #b69aff;
-      --purple-bright: #d1baff;
-      --max: 1080px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      color: var(--text);
-      background:
-        radial-gradient(ellipse at 80% 0%, rgba(113, 65, 175, .19), transparent 42%),
-        linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px),
-        var(--bg);
-      background-size: auto, 36px 36px, 36px 36px, auto;
-      font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    a { color: var(--purple-bright); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
-    header {
-      position: sticky; top: 0; z-index: 10;
-      border-bottom: 1px solid rgba(182,154,255,.18);
-      background: rgba(12,9,20,.88); backdrop-filter: blur(14px);
-    }
-    nav { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:16px 0; }
-    .brand { font-weight: 750; letter-spacing:.02em; color:var(--text); }
-    .brand span { color:var(--purple); }
-    .navlinks { display:flex; gap:22px; flex-wrap:wrap; font-size:.92rem; }
-    .hero { padding:100px 0 76px; }
-    .eyebrow { color:var(--purple); font-size:.78rem; font-weight:800; letter-spacing:.18em; text-transform:uppercase; }
-    h1 { max-width:850px; margin:14px 0 20px; font-size:clamp(2.8rem, 7vw, 5.5rem); line-height:1.02; letter-spacing:-.055em; }
-    h1 .accent { color:var(--purple-bright); }
-    .lead { max-width:690px; color:var(--muted); font-size:clamp(1.05rem, 2vw, 1.22rem); }
-    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
-    .btn { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:11px 18px; font-weight:700; }
-    .btn.primary { background:var(--purple); color:#160e25; border-color:var(--purple); }
-    .btn:hover { text-decoration:none; transform:translateY(-1px); }
-    .signal { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:52px; }
-    .signal div { border:1px solid var(--line); border-radius:14px; background:rgba(21,16,32,.8); padding:16px; }
-    .signal strong { display:block; font-size:.94rem; }
-    .signal span { display:block; color:var(--muted); font-size:.85rem; margin-top:3px; }
-    section { padding:52px 0; scroll-margin-top:80px; }
-    .section-head { display:flex; align-items:end; justify-content:space-between; gap:20px; margin-bottom:22px; }
-    h2 { margin:0; font-size:clamp(1.8rem,4vw,2.5rem); letter-spacing:-.035em; }
-    .section-head p { max-width:520px; margin:0; color:var(--muted); }
-    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
-    .card { border:1px solid var(--line); border-radius:18px; background:linear-gradient(145deg, rgba(29,21,48,.96), rgba(18,13,28,.96)); padding:24px; }
-    .card .num { color:var(--purple); font-size:.78rem; letter-spacing:.13em; font-weight:800; }
-    h3 { margin:8px 0 8px; font-size:1.25rem; }
-    .card p { color:var(--muted); margin:0 0 14px; }
-    .tags { display:flex; flex-wrap:wrap; gap:7px; }
-    .tag { color:#d7c8f4; background:#261b3a; border:1px solid #403057; border-radius:999px; padding:4px 9px; font-size:.78rem; }
-    .note { color:var(--muted); font-size:.92rem; border-left:2px solid var(--purple); padding-left:15px; margin-top:18px; }
-    .about { display:grid; grid-template-columns:1.1fr .9fr; gap:24px; align-items:start; }
-    .panel { border:1px solid var(--line); border-radius:18px; background:rgba(21,16,32,.85); padding:24px; }
-    .panel p { color:var(--muted); margin-top:0; }
-    ul.clean { list-style:none; padding:0; margin:0; }
-    ul.clean li { padding:10px 0; border-bottom:1px solid rgba(182,154,255,.12); }
-    ul.clean li:last-child { border-bottom:0; }
-    footer { border-top:1px solid var(--line); padding:28px 0 42px; color:var(--muted); font-size:.9rem; }
-    @media (max-width:700px) {
-      .navlinks { gap:12px; font-size:.82rem; }
-      .hero { padding:72px 0 48px; }
-      .signal, .grid, .about { grid-template-columns:1fr; }
-      .section-head { display:block; }
-      .section-head p { margin-top:8px; }
-    }
-  </style>
+  <meta name="theme-color" content="#100b1f">
+  <meta name="description" content="Engineering portfolio spanning robotics, research, software, and aerospace.">
+  <title>Your Name — Engineering Portfolio</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<header>
-  <nav class="wrap" aria-label="Main navigation">
-    <a class="brand" href="#top">YOUR NAME<span>.</span></a>
-    <div class="navlinks">
-      <a href="#projects">Projects</a>
-      <a href="#research">Research</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-</header>
-
-<main id="top">
-  <div class="wrap hero">
-    <div class="eyebrow">Engineering · Computing · Research</div>
-    <h1>Turning questions into <span class="accent">working systems.</span></h1>
-    <p class="lead">I'm an aspiring engineer interested in robotics, aerospace, embedded systems, and the software that connects them. This portfolio documents what I build, investigate, and learn along the way.</p>
-    <div class="actions">
-      <a class="btn primary" href="#projects">Explore my work ↓</a>
-      <a class="btn" href="#about">About me</a>
-    </div>
-    <div class="signal">
-      <div><strong>Robotics & control</strong><span>Software, mechanisms, integration</span></div>
-      <div><strong>Embedded computing</strong><span>Hardware-aware problem solving</span></div>
-      <div><strong>Independent investigation</strong><span>Questions, methods, evidence</span></div>
-    </div>
-  </div>
-
-  <section id="projects">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Selected projects</h2>
-        <p>Project pages will explain the problem, my contribution, technical decisions, evidence, and what I learned.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Your Name home">
+      <span class="brand-mark">Y<span>N</span></span>
+      <span class="brand-copy"><strong>YOUR NAME</strong><small>ENGINEERING / R&D</small></span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+      <span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-link dropdown-toggle" aria-expanded="false">Explore <span class="chevron">⌄</span></button>
+        <div class="dropdown-menu">
+          <a href="#robotics"><span>01</span> Robotics</a>
+          <a href="#research"><span>02</span> Research</a>
+          <a href="#software"><span>03</span> Software</a>
+          <a href="#aerospace"><span>04</span> Aerospace</a>
+        </div>
       </div>
-      <div class="grid">
-        <article class="card">
-          <div class="num">PROJECT 01 / ROBOTICS</div>
-          <h3>Robot Software & Control</h3>
-          <p>Documenting software architecture, subsystems, motor control, and integration work from my robotics team.</p>
-          <div class="tags"><span class="tag">Software</span><span class="tag">Controls</span><span class="tag">Robotics</span></div>
-          <div class="note">In progress — details and evidence will be added after reviewing the repository.</div>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#contact">Contact</a>
+      <a class="nav-resume" href="resume.html">Resume <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> ENGINEERING THE NOT-YET</div>
+        <h1>Curiosity, built<br>into <span class="gradient-text">reality.</span></h1>
+        <p class="hero-intro">I’m <strong>[Your Name]</strong> — an engineer and researcher exploring the space between bold ideas and working systems.</p>
+        <p class="hero-sub">Robotics. Research. Software. Aerospace. A little future-forward thinking, grounded in real engineering.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore my work <span>↘</span></a>
+          <a class="button button-quiet" href="resume.html">View resume <span>↗</span></a>
+        </div>
+        <div class="hero-meta">
+          <div><span class="meta-label">CURRENT FOCUS</span><strong>[Your current focus]</strong></div>
+          <div><span class="meta-label">BASE</span><strong>[City, Country]</strong></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Abstract futuristic engineering illustration">
+        <div class="art-topline"><span>FIG. 001 / SYSTEMS VIEW</span><span>00:00:00:∞</span></div>
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+        <div class="core"><div class="core-inner">YN</div></div>
+        <div class="crosshair crosshair-one"></div><div class="crosshair crosshair-two"></div>
+        <div class="art-label label-a"><span class="label-line"></span><span>IDEA → ITERATION</span></div>
+        <div class="art-label label-b"><span class="label-line"></span><span>BUILD / TEST / LEARN</span></div>
+        <div class="coordinate coord-a">41° 18' 00.0"N</div>
+        <div class="coordinate coord-b">FUTURE SYSTEMS LAB</div>
+        <div class="art-bottomline"><span>DESIGN FOR WHAT'S NEXT</span><span>EST. 20XX</span></div>
+      </div>
+      <div class="scroll-cue"><span></span> SCROLL TO EXPLORE</div>
+    </section>
+
+    <section class="ticker" aria-label="Areas of interest">
+      <div class="ticker-track"><span>ROBOTICS</span><i>✳</i><span>RESEARCH</span><i>✳</i><span>SOFTWARE</span><i>✳</i><span>AEROSPACE</span><i>✳</i><span>ROBOTICS</span><i>✳</i><span>RESEARCH</span><i>✳</i><span>SOFTWARE</span><i>✳</i><span>AEROSPACE</span><i>✳</i></div>
+    </section>
+
+    <section class="section-wrap work-section" id="work">
+      <div class="section-heading">
+        <div><div class="eyebrow">01 / RESEARCH & SELECTED DIRECTIONS</div><h2>Questions worth <span class="gradient-text">chasing.</span></h2></div>
+        <p>Research-led engineering, open questions, experiments, and projects that evolve over time.</p>
+      </div>
+      <div class="research-note">
+        <div class="research-note-icon">⌁</div>
+        <div><span class="note-kicker">THE RESEARCH MINDSET</span><h3>Start with a question. Follow the evidence.</h3><p>This portfolio is designed to grow with your work — from early ideas and literature reviews to prototypes, experiments, publications, and final results.</p></div>
+        <a class="text-link" href="#research">Explore research <span>↘</span></a>
+      </div>
+      <div class="discipline-grid">
+        <article class="discipline-card card-robotics" id="robotics">
+          <div class="card-index">01 — ROBOTICS</div><div class="card-icon robot-icon"><span></span><span></span><span></span><i></i></div>
+          <h3>Robotics & autonomy</h3><p>From sensing and control to intelligent machines that interact with the real world.</p>
+          <div class="tag-row"><span>CONTROL</span><span>PERCEPTION</span><span>MECHATRONICS</span></div>
+          <a class="text-link" href="#project-robotics">View projects <span>↗</span></a>
         </article>
-        <article class="card">
-          <div class="num">PROJECT 02 / RESEARCH</div>
-          <h3>Embedded AI & Autonomous Systems</h3>
-          <p>A space for a carefully documented investigation connected to robotics research and embedded computing.</p>
-          <div class="tags"><span class="tag">Research</span><span class="tag">Computing</span><span class="tag">Analysis</span></div>
-          <div class="note">Planned — no results are claimed until the work has been completed and checked.</div>
+        <article class="discipline-card card-research" id="research">
+          <div class="card-index">02 — RESEARCH</div><div class="card-icon research-icon"><span></span><span></span><span></span></div>
+          <h3>Research & discovery</h3><p>Exploring open questions through literature reviews, modeling, experiments, and evidence-led analysis.</p>
+          <div class="tag-row"><span>EXPERIMENTS</span><span>MODELING</span><span>ANALYSIS</span></div>
+          <a class="text-link" href="#project-research">View research <span>↗</span></a>
+        </article>
+        <article class="discipline-card card-software" id="software">
+          <div class="card-index">03 — SOFTWARE</div><div class="card-icon software-icon"><span>&lt;/&gt;</span></div>
+          <h3>Software & systems</h3><p>Building the code, tools, and infrastructure that make complex systems useful.</p>
+          <div class="tag-row"><span>PYTHON</span><span>C/C++</span><span>TOOLS</span></div>
+          <a class="text-link" href="#project-software">View software <span>↗</span></a>
+        </article>
+        <article class="discipline-card card-aerospace" id="aerospace">
+          <div class="card-index">04 — AEROSPACE</div><div class="card-icon aerospace-icon"><span>✳</span><i></i></div>
+          <h3>Aerospace & flight</h3><p>Exploring flight, spacecraft, and the engineering that pushes our horizons outward.</p>
+          <div class="tag-row"><span>FLIGHT</span><span>SIMULATION</span><span>MISSION DESIGN</span></div>
+          <a class="text-link" href="#project-aerospace">View projects <span>↗</span></a>
         </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="research">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Research & investigations</h2>
-        <p>Questions I explore through technical reading, analysis, modeling, or experiments.</p>
-      </div>
-      <div class="panel">
-        <h3>Current interests</h3>
-        <ul class="clean">
-          <li>Autonomous systems and robot perception</li>
-          <li>Aerospace systems, flight dynamics, and trajectory prediction</li>
-          <li>Embedded computing and hardware/software integration</li>
-        </ul>
-        <p class="note">These are areas of interest, not claims of completed research. Individual investigations will include sources, methods, assumptions, and findings.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>About</h2>
-        <p>A growing record of how I approach technical problems.</p>
-      </div>
-      <div class="about">
-        <div class="panel">
-          <h3>How I work</h3>
-          <p>I'm interested in understanding how complete systems work together: software, electronics, control, and the physical mechanisms they operate. I use this portfolio to document both the results and the reasoning behind them.</p>
-          <p>As this site develops, I'll distinguish independent work from team contributions and identify unfinished investigations clearly.</p>
+    <section class="featured-section" aria-labelledby="featured-title">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <div><div class="eyebrow">02 / THE WORKBENCH</div><h2 id="featured-title">Selected <span class="gradient-text">projects.</span></h2></div>
+          <p>Feature completed work here, then keep promising questions and works-in-progress in the next-iteration section below.</p>
         </div>
-        <div class="panel">
-          <h3>Technical areas</h3>
-          <ul class="clean">
-            <li>Robotics software</li>
-            <li>Motor control and system integration</li>
-            <li>Programming and debugging</li>
-            <li>Technical research and documentation</li>
-          </ul>
-          <p class="note">We'll update this list after reviewing your actual code and experience.</p>
+        <div class="project-list">
+          <article class="project-row" id="project-robotics">
+            <div class="project-visual visual-robot"><div class="visual-grid"></div><div class="mini-arm"><i></i><b></b><em></em><span></span></div><span class="visual-caption">MECHANISM / 001</span></div>
+            <div class="project-info"><div class="project-meta"><span>ROBOTICS</span><span>PROJECT 001</span></div><h3>[Autonomous Robotics Project]</h3><p>A short, specific description of the challenge, what you built, and what made the result useful or interesting.</p><div class="tag-row"><span>ROS 2</span><span>PYTHON</span><span>CONTROL</span></div><a class="text-link" href="https://github.com/" target="_blank" rel="noreferrer">Explore repository <span>↗</span></a></div>
+          </article>
+          <article class="project-row" id="project-research">
+            <div class="project-visual visual-research"><div class="plot-line"></div><div class="plot-dot"></div><span class="visual-caption">DATA / 002</span><div class="plot-axis">SIGNAL STRENGTH →</div></div>
+            <div class="project-info"><div class="project-meta"><span>RESEARCH</span><span>PROJECT 002</span></div><h3>[Research Question or Paper]</h3><p>Summarize the question, methodology, your contribution, and the most important finding in plain language.</p><div class="tag-row"><span>MODELING</span><span>DATA ANALYSIS</span><span>TECHNICAL WRITING</span></div><a class="text-link" href="https://scholar.google.com/" target="_blank" rel="noreferrer">Read publication / report <span>↗</span></a></div>
+          </article>
+          <article class="project-row" id="project-software">
+            <div class="project-visual visual-software"><div class="code-window"><div class="code-dots">● ● ●</div><span>def build_future():</span><span class="indent">prototype = idea()</span><span class="indent">test(prototype)</span><span class="indent code-accent">return iterate()</span></div><span class="visual-caption">SOFTWARE / 003</span></div>
+            <div class="project-info"><div class="project-meta"><span>SOFTWARE</span><span>PROJECT 003</span></div><h3>[Software Tool or Application]</h3><p>Describe the problem this tool solves, the technical decisions behind it, and what you learned while building it.</p><div class="tag-row"><span>JAVASCRIPT</span><span>API</span><span>UI / UX</span></div><a class="text-link" href="https://github.com/" target="_blank" rel="noreferrer">Explore repository <span>↗</span></a></div>
+          </article>
+          <article class="project-row" id="project-aerospace">
+            <div class="project-visual visual-aerospace"><div class="planet"></div><div class="trajectory"></div><span class="visual-caption">FLIGHT PATH / 004</span></div>
+            <div class="project-info"><div class="project-meta"><span>AEROSPACE</span><span>PROJECT 004</span></div><h3>[Aerospace Design or Simulation]</h3><p>Explain the mission or design objective, constraints you considered, and how you evaluated the outcome.</p><div class="tag-row"><span>SIMULATION</span><span>CAD</span><span>TRAJECTORY</span></div><a class="text-link" href="https://github.com/" target="_blank" rel="noreferrer">View project details <span>↗</span></a></div>
+          </article>
+        </div>
+        <div class="future-work">
+          <div class="future-heading"><div><div class="eyebrow">THE NEXT ITERATION</div><h3>Room for what's <span class="gradient-text">next.</span></h3></div><p>Keep this section for work in progress, new research directions, and projects still taking shape.</p></div>
+          <div class="future-grid">
+            <article class="future-card"><span class="future-status"><i></i> EXPLORING</span><div class="future-number">05</div><h4>[Future research question]</h4><p>A question you're investigating, a paper you're reading, or a concept you'd like to test.</p><span class="future-type">RESEARCH DIRECTION</span></article>
+            <article class="future-card"><span class="future-status"><i></i> IN PROGRESS</span><div class="future-number">06</div><h4>[Prototype / build in progress]</h4><p>Document the current stage, the next milestone, and what you hope to learn from the build.</p><span class="future-type">ACTIVE PROJECT</span></article>
+            <article class="future-card future-add"><div class="add-symbol">＋</div><h4>Your next project goes here.</h4><p>Duplicate a card in <code>index.html</code> whenever you want to add a new project, paper, or experiment.</p><span class="future-type">SPACE TO GROW</span></article>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact">
-    <div class="wrap">
-      <div class="panel">
-        <div class="eyebrow">Contact</div>
-        <h2>Let's connect.</h2>
-        <p style="color:var(--muted)">Add a professional email address or links to selected public projects here when you're ready.</p>
-        <div class="actions">
-          <a class="btn" href="https://github.com/">GitHub profile ↗</a>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
+    <section class="about-section section-wrap" id="about">
+      <div class="about-mark"><div class="about-orbit"></div><div class="about-monogram">YN<span>+</span></div><span class="about-stamp">ALWAYS IN BETA</span></div>
+      <div class="about-copy"><div class="eyebrow">03 / THE HUMAN BEHIND THE HARDWARE</div><h2>Serious about the work.<br><span class="gradient-text">Curious about everything.</span></h2><p>I'm an aspiring [engineer / researcher / builder] interested in how ambitious ideas become real systems. I like working across disciplines, learning by making, and asking the extra question that leads to a better design.</p><p>Outside the lab, I'm usually [personal interest], [another interest], or collecting ideas for the next project. I believe good engineering takes technical rigor, creativity, and the willingness to iterate.</p><div class="about-facts"><div><span>01</span><strong>Think in systems</strong></div><div><span>02</span><strong>Build to understand</strong></div><div><span>03</span><strong>Keep looking forward</strong></div></div><a class="text-link" href="resume.html">More about my background <span>↗</span></a></div>
+    </section>
 
-<footer>
-  <div class="wrap">© <span id="year"></span> YOUR NAME · Built with HTML & CSS · Always learning.</div>
-</footer>
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+    <section class="contact-section" id="contact">
+      <div class="section-wrap contact-inner"><div class="eyebrow">04 / OPEN CHANNEL</div><h2>Have a good problem?<br><span class="gradient-text">Let's build something.</span></h2><p>Interested in research collaborations, engineering opportunities, or a conversation about a project? I'd love to hear from you.</p><div class="contact-actions"><a class="button button-primary" href="mailto:your.email@example.com">Send a message <span>↗</span></a><a class="button button-quiet" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a><a class="button button-quiet" href="https://github.com/" target="_blank" rel="noreferrer">GitHub <span>↗</span></a></div><div class="contact-coordinate">SIGNAL OPEN <span class="status-dot"></span> RESPONSE TIME: HUMAN</div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="footer-brand" href="#home">YN<span> / </span>ENGINEERING</a><span>Designed for the present. Built for what's next.</span><span>© <span id="year">2026</span> YOUR NAME</span></footer>
 </body>
 </html>
