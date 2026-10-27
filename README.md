@@ -1,6 +1,6 @@
-//Engineering Portfolio 
+#Engineering Portfolio 
 
-//Site structure
+#Site structure
 
 - `index.html` — home / quick introduction and navigation
 - `research.html` — collaborative team research, self-directed investigations, and future research interests
