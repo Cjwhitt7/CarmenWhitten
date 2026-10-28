@@ -167,7 +167,7 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opaci
 .page-intro h1{font-size:clamp(44px,7vw,78px);line-height:1.02;letter-spacing:-3px;margin:19px 0 20px;max-width:800px}
 .page-intro p{max-width:660px;font-size:15px;line-height:1.9;color:var(--muted)}
 .page-stamp{display:inline-block;margin-top:22px;padding:8px 10px;border:1px dashed #ff8b6755;color:var(--hotwire)}
-.page-intro:after{content:"77:15";position:absolute;right:3%;bottom:32px;font:clamp(30px,5vw,60px) var(--mono);color:#b9ffa910;letter-spacing:-5px;pointer-events:none}
+.page-intro:after{content:"77:77";position:absolute;right:3%;bottom:32px;font:clamp(30px,5vw,60px) var(--mono);color:#b9ffa910;letter-spacing:-5px;pointer-events:none}
 .page-intro+.work-section,.page-intro+.featured-section{padding-top:65px}
 .page-intro+.work-section .section-heading,.page-intro+.featured-section .section-heading{align-items:end}
 .project-meta span:first-child{color:var(--flux)!important}
