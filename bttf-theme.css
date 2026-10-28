@@ -379,3 +379,62 @@ button:focus-visible {
     flex-direction: column;
   }
 }
+
+/* Center the Software page intro */
+.page-intro {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-intro .eyebrow,
+.page-intro .system-indicator {
+  text-align: center;
+}
+
+.page-intro h1 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-intro > p:not(.eyebrow):not(.system-indicator) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Brighter neon accents, without sacrificing readability */
+:root {
+  --time-purple: #b69aff;
+  --time-purple-light: #e2d5ff;
+  --time-cyan: #72ffe3;
+  --time-orange: #ffad70;
+  --time-border: rgba(182, 154, 255, 0.4);
+}
+
+.page-intro::before {
+  box-shadow: 0 0 18px rgba(114, 255, 227, 0.12);
+}
+
+.notebook-entry,
+.technical-panel {
+  box-shadow: 0 0 24px rgba(137, 85, 255, 0.07);
+}
+
+.notebook-entry:hover,
+.technical-panel:hover {
+  border-color: rgba(114, 255, 227, 0.55);
+  box-shadow: 0 0 25px rgba(114, 255, 227, 0.09);
+}
+
+.gradient-text {
+  background: linear-gradient(
+    100deg,
+    #e2d5ff,
+    #b69aff,
+    #72ffe3
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
