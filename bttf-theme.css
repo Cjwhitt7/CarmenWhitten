@@ -1,0 +1,150 @@
+
+/* RETRO-FUTURIST THEME */
+
+:root {
+  --time-purple: #a78bfa;
+  --time-purple-light: #d6c7ff;
+  --time-cyan: #9effe0;
+  --time-orange: #ff986b;
+  --time-border: rgba(167, 139, 250, 0.26);
+}
+
+/* Subtle technical grid */
+body {
+  background-color: #0b0912;
+  background-image:
+    linear-gradient(rgba(167, 139, 250, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(167, 139, 250, 0.045) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Fine scan lines: a subtle retro-computer effect */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0.10;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 3px,
+    rgba(200, 185, 255, 0.12) 4px
+  );
+}
+
+/* Keep the website readable above the background effects */
+header,
+main,
+footer {
+  position: relative;
+}
+
+/* Purple borders with a hint of illuminated circuitry */
+article,
+.card,
+.project-card,
+.research-card,
+.panel {
+  border-color: var(--time-border);
+}
+
+/* Technical labels */
+.eyebrow,
+.section-label,
+.status-label {
+  color: var(--time-cyan);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Purple-to-cyan headline accents */
+.gradient-text {
+  background: linear-gradient(
+    100deg,
+    var(--time-purple-light),
+    var(--time-purple),
+    var(--time-cyan)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Navigation accents */
+.primary-nav a.active,
+.primary-nav a[aria-current="page"] {
+  color: var(--time-cyan);
+}
+
+.primary-nav a:hover {
+  color: var(--time-purple-light);
+}
+
+/* Links */
+a {
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  text-decoration-color: var(--time-cyan);
+}
+
+/* Purple glow for interactive elements */
+button,
+.button,
+.button-primary {
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+button:hover,
+.button:hover,
+.button-primary:hover {
+  box-shadow: 0 0 18px rgba(167, 139, 250, 0.16);
+}
+
+/* Technical panels */
+.technical-panel,
+.notebook-entry,
+.retro-panel {
+  border: 1px solid var(--time-border);
+  background: rgba(18, 14, 30, 0.82);
+}
+
+/* Small orange indicator details */
+.status-dot {
+  background: var(--time-cyan);
+  box-shadow: 0 0 10px rgba(158, 255, 224, 0.55);
+}
+
+.system-indicator {
+  color: var(--time-orange);
+}
+
+/* Selection color */
+::selection {
+  color: #100b1f;
+  background: var(--time-cyan);
+}
+
+/* Keyboard accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--time-cyan);
+  outline-offset: 4px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
