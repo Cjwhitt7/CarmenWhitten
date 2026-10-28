@@ -1,133 +1,151 @@
-/* RETRO-FUTURIST THEME */
+
+/* CJW ENGINEERING PORTFOLIO
+   Shared retro-futurist theme
+   Base layout stays in styles.css */
 
 :root {
-  --time-purple: #a78bfa;
-  --time-purple-light: #d6c7ff;
-  --time-cyan: #9effe0;
-  --time-orange: #ff986b;
-  --time-border: rgba(167, 139, 250, 0.26);
+  --time-purple: #b69aff;
+  --time-purple-light: #e2d5ff;
+  --time-cyan: #72ffe3;
+  --time-orange: #ffad70;
+  --time-border: rgba(182, 154, 255, 0.25);
 }
 
-/* Subtle technical grid */
-body {
-  background-color: #0b0912;
-  background-image:
-    linear-gradient(rgba(167, 139, 250, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(167, 139, 250, 0.045) 1px, transparent 1px);
-  background-size: 40px 40px;
+/* Keep the same midnight background on every page.
+   Do not override the background defined in styles.css. */
+
+::selection {
+  color: #100b1f;
+  background: var(--time-cyan);
 }
 
-/* Fine scan lines: a subtle retro-computer effect */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 10;
-  opacity: 0.10;
-  background: repeating-linear-gradient(
-    to bottom,
-    transparent 0,
-    transparent 3px,
-    rgba(200, 185, 255, 0.12) 4px
-  );
+/* Shared brand details */
+.brand-mark {
+  border-color: rgba(182, 154, 255, 0.75) !important;
+  color: var(--time-cyan);
+  text-shadow: 0 0 12px rgba(114, 255, 227, 0.3);
 }
 
-/* Keep the website readable above the background effects */
-header,
-main,
-footer {
-  position: relative;
+.brand-copy small {
+  color: var(--time-cyan) !important;
 }
 
-/* Purple borders with a hint of illuminated circuitry */
-article,
-.card,
-.project-card,
-.research-card,
-.panel {
-  border-color: var(--time-border);
+/* Shared navigation */
+.primary-nav a,
+.primary-nav .nav-link {
+  transition: color 180ms ease, border-color 180ms ease;
 }
 
-/* Technical labels */
+.primary-nav a:hover,
+.primary-nav a.active,
+.primary-nav a[aria-current="page"],
+.primary-nav .nav-link:hover,
+.primary-nav .nav-link.active {
+  color: var(--time-cyan) !important;
+}
+
+.nav-resume,
+.primary-nav a[href="resume.html"] {
+  border-color: rgba(182, 154, 255, 0.55);
+  color: var(--time-purple-light);
+}
+
+.nav-resume:hover,
+.primary-nav a[href="resume.html"]:hover {
+  border-color: var(--time-cyan);
+  color: var(--time-cyan);
+}
+
+/* One shared gradient for headings and highlights */
+.gradient-text {
+  background: linear-gradient(
+    100deg,
+    #e2d5ff 0%,
+    #b69aff 48%,
+    #72ffe3 100%
+  ) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* Brighter technical labels */
 .eyebrow,
 .section-label,
 .status-label {
   color: var(--time-cyan);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
-/* Purple-to-cyan headline accents */
-.gradient-text {
-  background: linear-gradient(
-    100deg,
-    var(--time-purple-light),
-    var(--time-purple),
-    var(--time-cyan)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+/* Status indicators */
+.status-dot {
+  background: var(--time-cyan) !important;
+  box-shadow: 0 0 10px rgba(114, 255, 227, 0.7) !important;
 }
 
-/* Navigation accents */
-.primary-nav a.active,
-.primary-nav a[aria-current="page"] {
+/* Buttons */
+.button-primary {
+  background: linear-gradient(120deg, #c4aaff, #8f70ff) !important;
+  border-color: #b69aff !important;
+  color: #100b1f !important;
+  box-shadow: 0 0 20px rgba(143, 112, 255, 0.18);
+}
+
+.button-primary:hover {
+  box-shadow: 0 0 25px rgba(114, 255, 227, 0.22);
+}
+
+.button-quiet:hover,
+.text-link:hover {
   color: var(--time-cyan);
 }
 
-.primary-nav a:hover {
-  color: var(--time-purple-light);
-}
-
-/* Links */
-a {
-  text-underline-offset: 4px;
-}
-
-a:hover {
-  text-decoration-color: var(--time-cyan);
-}
-
-/* Purple glow for interactive elements */
-button,
-.button,
-.button-primary {
-  transition:
-    border-color 180ms ease,
-    box-shadow 180ms ease,
-    transform 180ms ease;
-}
-
-button:hover,
-.button:hover,
-.button-primary:hover {
-  box-shadow: 0 0 18px rgba(167, 139, 250, 0.16);
-}
-
-/* Technical panels */
-.technical-panel,
+/* Cards and project borders */
+.discipline-card,
+.project-row,
 .notebook-entry,
-.retro-panel {
-  border: 1px solid var(--time-border);
-  background: rgba(18, 14, 30, 0.82);
+.about-mark,
+.hero-art {
+  border-color: var(--time-border);
 }
 
-/* Small orange indicator details */
-.status-dot {
-  background: var(--time-cyan);
-  box-shadow: 0 0 10px rgba(158, 255, 224, 0.55);
+.discipline-card:hover {
+  border-color: rgba(114, 255, 227, 0.55);
+  box-shadow: 0 0 24px rgba(143, 112, 255, 0.1);
 }
 
-.system-indicator {
+/* Retro-futuristic accents without extra glare */
+.hero-art {
+  box-shadow: inset 0 0 45px rgba(114, 255, 227, 0.025);
+}
+
+.art-topline,
+.art-bottomline {
+  color: var(--time-cyan);
+}
+
+.coordinate {
+  color: rgba(114, 255, 227, 0.72);
+}
+
+.route-no,
+.route-list a:hover,
+.project-meta span:first-child,
+.future-status {
+  color: var(--time-cyan) !important;
+}
+
+.page-stamp {
+  border-color: rgba(255, 173, 112, 0.4);
   color: var(--time-orange);
 }
 
-/* Selection color */
-::selection {
-  color: #100b1f;
-  background: var(--time-cyan);
+/* Keep text and page headings readable */
+.page-intro h1 {
+  max-width: 800px;
+}
+
+.page-intro p {
+  max-width: 660px;
 }
 
 /* Keyboard accessibility */
@@ -137,7 +155,7 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
-/* Respect reduced-motion preferences */
+/* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -147,294 +165,3 @@ button:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
-
-/* SOFTWARE PAGE — layout and retro-futurist styling */
-
-.page-intro {
-  width: min(1000px, calc(100% - 48px));
-  margin: 0 auto;
-  padding: 100px 0 65px;
-  border-bottom: 1px solid var(--line);
-  position: relative;
-}
-
-.page-intro::before {
-  content: "CJW // TECHNICAL LOG";
-  display: block;
-  width: fit-content;
-  margin-bottom: 28px;
-  padding: 7px 10px;
-  border: 1px solid rgba(158, 255, 224, 0.3);
-  color: #9effe0;
-  background: rgba(158, 255, 224, 0.04);
-  font: 9px var(--mono);
-  letter-spacing: 1.5px;
-}
-
-.page-intro .eyebrow {
-  margin-bottom: 12px;
-}
-
-.page-intro h1 {
-  max-width: 850px;
-  margin: 0 0 25px;
-  font-size: clamp(42px, 6vw, 72px);
-  line-height: 1.08;
-  letter-spacing: -3px;
-}
-
-.page-intro > p:not(.eyebrow):not(.system-indicator) {
-  max-width: 650px;
-  color: var(--muted);
-  font-size: 15px;
-}
-
-.system-indicator {
-  margin-top: 30px;
-  color: #9effe0;
-  font: 10px var(--mono);
-  letter-spacing: 1.5px;
-}
-
-.section-wrap {
-  padding-top: 65px;
-  padding-bottom: 90px;
-}
-
-.section-wrap > .eyebrow {
-  margin: 65px 0 12px;
-}
-
-.section-wrap > .eyebrow:first-child {
-  margin-top: 0;
-}
-
-.section-wrap > h2 {
-  margin: 0 0 25px;
-  font-size: clamp(25px, 3.5vw, 36px);
-  line-height: 1.2;
-  letter-spacing: -1px;
-}
-
-.notebook-entry,
-.technical-panel {
-  position: relative;
-  margin: 0 0 55px;
-  padding: 30px;
-  border: 1px solid var(--line);
-  border-left: 2px solid #a78bfa;
-  background: linear-gradient(
-    135deg,
-    rgba(33, 24, 59, 0.85),
-    rgba(17, 13, 30, 0.92)
-  );
-}
-
-.notebook-entry::after {
-  content: "FIELD NOTE";
-  position: absolute;
-  top: 27px;
-  right: 28px;
-  color: #807796;
-  font: 8px var(--mono);
-  letter-spacing: 1.2px;
-}
-
-.notebook-entry .eyebrow {
-  margin: 0 0 14px;
-  color: #9effe0;
-}
-
-.notebook-entry h3 {
-  margin: 0 0 25px;
-  padding-right: 75px;
-  font-size: clamp(20px, 3vw, 28px);
-  line-height: 1.3;
-}
-
-.notebook-entry p:not(.eyebrow) {
-  margin: 0 0 19px;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.85;
-  overflow-wrap: anywhere;
-}
-
-.notebook-entry p strong {
-  display: inline-block;
-  margin-bottom: 4px;
-  color: #e7dfff;
-  font-size: 11px;
-  letter-spacing: 0.6px;
-}
-
-.technical-panel {
-  margin-top: 65px;
-  border-left-color: #9effe0;
-}
-
-.technical-panel .eyebrow {
-  color: #9effe0;
-}
-
-.technical-panel h2 {
-  margin: 12px 0;
-  font-size: 27px;
-}
-
-.technical-panel p:not(.eyebrow) {
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.site-footer {
-  border-top: 1px solid var(--line);
-}
-
-/* Match the other styles */
-.primary-nav a {
-  flex-shrink: 0;
-  color: var(--muted);
-  font-size: 12px;
-  transition: color 0.2s ease;
-}
-
-.primary-nav a:hover,
-.primary-nav a.active,
-.primary-nav a[aria-current="page"] {
-  color: #9effe0;
-}
-
-.primary-nav a[aria-current="page"] {
-  border-bottom: 1px solid #9effe0;
-  padding-bottom: 6px;
-}
-
-.primary-nav a[href="resume.html"] {
-  padding: 9px 12px;
-  border: 1px solid rgba(167, 139, 250, 0.45);
-  color: #d6c7ff;
-}
-
-/* Make the navigation usable on phones */
-@media (max-width: 680px) {
-  .site-header {
-    height: auto;
-    min-height: 70px;
-    padding: 14px 20px;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .primary-nav {
-    display: flex !important;
-    position: static;
-    width: 100%;
-    padding: 8px 0 2px;
-    gap: 20px;
-    overflow-x: auto;
-    flex-direction: row;
-    align-items: center;
-    border: 0;
-    background: transparent;
-    scrollbar-width: thin;
-  }
-
-  .primary-nav a {
-    padding: 7px 0;
-  }
-
-  .page-intro {
-    padding-top: 65px;
-  }
-
-  .page-intro h1 {
-    letter-spacing: -2px;
-  }
-
-  .section-wrap {
-    width: calc(100% - 32px);
-    padding-top: 45px;
-    padding-bottom: 60px;
-  }
-
-  .notebook-entry,
-  .technical-panel {
-    padding: 22px 18px;
-    margin-bottom: 35px;
-  }
-
-  .notebook-entry::after {
-    display: none;
-  }
-
-  .notebook-entry h3 {
-    padding-right: 0;
-  }
-
-  .site-footer {
-    width: calc(100% - 32px);
-    padding: 22px 0;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
-
-/* Center the Software page intro */
-.page-intro {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.page-intro .eyebrow,
-.page-intro .system-indicator {
-  text-align: center;
-}
-
-.page-intro h1 {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.page-intro > p:not(.eyebrow):not(.system-indicator) {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Brighter neon accents, without sacrificing readability */
-:root {
-  --time-purple: #b69aff;
-  --time-purple-light: #e2d5ff;
-  --time-cyan: #72ffe3;
-  --time-orange: #ffad70;
-  --time-border: rgba(182, 154, 255, 0.4);
-}
-
-.page-intro::before {
-  box-shadow: 0 0 18px rgba(114, 255, 227, 0.12);
-}
-
-.notebook-entry,
-.technical-panel {
-  box-shadow: 0 0 24px rgba(137, 85, 255, 0.07);
-}
-
-.notebook-entry:hover,
-.technical-panel:hover {
-  border-color: rgba(114, 255, 227, 0.55);
-  box-shadow: 0 0 25px rgba(114, 255, 227, 0.09);
-}
-
-.gradient-text {
-  background: linear-gradient(
-    100deg,
-    #e2d5ff,
-    #b69aff,
-    #72ffe3
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
